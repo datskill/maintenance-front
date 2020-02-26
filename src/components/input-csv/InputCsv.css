@@ -4,7 +4,28 @@
 }
 .awesome-padding {
     padding-top: 60px;
+    padding-left: 60px;
 }
 .display-nothing {
     display: none;
+}
+.maintenance-site {
+    background-color: white;
+    padding-top: 20px;
+}
+.style-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+.styled-p {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 16px;
+}
+.padding-button {
+    padding-top: 30px;
+}
+.custom-button {
+    background-color: #4caf50 !important;
+    color: white !important;
 }
