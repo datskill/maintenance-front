@@ -5,6 +5,7 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import SaveIcon from '@material-ui/icons/Save';
 import axios from 'axios';
 import './InputCsv.css'
+import { filesToFormData } from '../../core/utils';
 
 
 export interface IState {
@@ -16,7 +17,6 @@ export default class InputCsv extends React.Component<{}, IState> {
     constructor(props: any) {
         super(props);
         this.state = { files: [], onMaintenance: false };
-        this.sendCSV = this.sendCSV.bind(this);
     }
     getUploadedFileName = (e: React.ChangeEvent<HTMLInputElement>) => {
         let files: FileList = e.target.files ? e.target.files : new FileList();
@@ -91,12 +91,19 @@ export default class InputCsv extends React.Component<{}, IState> {
             </Grid>
         );
     }
-    sendCSV(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
-        axios.post(`http://localhost:8080/data`, this.state.files).then(res => {
+    sendCSV() {
+        const formData = new FormData();
+        formData.append('files', this.state.files[0]);
+        axios.post(`http://localhost:8080/data`, filesToFormData(this.state.files), {
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        }).then(res => {
             console.log(res);
         })
     }
     activatedButton() {
+
         return (
             <Grid className="padding-button" item md={12}>
                 <Button
@@ -104,7 +111,7 @@ export default class InputCsv extends React.Component<{}, IState> {
                     component="label"
                     className="custom-button"
                     startIcon={<CloudUploadIcon />}
-                    onClick={() => this.sendCSV}
+                    onClick={() => this.sendCSV()}
                 >
                     Envoyer
                 </Button>

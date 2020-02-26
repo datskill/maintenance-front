@@ -5,3 +5,11 @@ export function fileListToArray(fileList: FileList): File[] {
     }
     return files;
 }
+
+export function filesToFormData(files: File[]): FormData {
+    const form = new FormData();
+    files.map(x => {
+        form.append('files', x);
+    })
+    return form;
+}
