@@ -8,7 +8,7 @@ export function fileListToArray(fileList: FileList): File[] {
 
 export function filesToFormData(files: File[]): FormData {
     const form = new FormData();
-    files.map(x => {
+    files.forEach(x => {
         form.append('files', x);
     })
     return form;
