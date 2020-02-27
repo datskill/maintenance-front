@@ -44,18 +44,18 @@
 pipeline {
          agent any
          tools {nodejs "maintenance-front"}
-         properties(
-    [
-        [$class: 'BuildDiscarderProperty', strategy:
-          [$class: 'LogRotator', artifactDaysToKeepStr: '14', artifactNumToKeepStr: '5', daysToKeepStr: '30', numToKeepStr: '60']],
-        pipelineTriggers(
-          [
-              pollSCM('* * * * *'),
-              cron('@daily'),
-          ]
-        )
-    ]
-)
+//          options(
+//     [
+//         [$class: 'BuildDiscarderProperty', strategy:
+//           [$class: 'LogRotator', artifactDaysToKeepStr: '14', artifactNumToKeepStr: '5', daysToKeepStr: '30', numToKeepStr: '60']],
+//         pipelineTriggers(
+//           [
+//               pollSCM('* * * * *'),
+//               cron('@daily'),
+//           ]
+//         )
+//     ]
+// )
 
     stages {
         stage("Code Checkout") {
