@@ -1,3 +1,6 @@
+FROM node:10
+USER root
+RUN npm i -g @angular/cli
 FROM jenkins/jenkins
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 
