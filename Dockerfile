@@ -1,6 +1,3 @@
-FROM node:10
-USER root
-RUN npm i -g @angular/cli
 FROM jenkins/jenkins
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 
@@ -17,6 +14,10 @@ RUN add-apt-repository \
     stable"
 RUN apt-get update  -qq \
     && apt-get install docker-ce -y
+RUN apt-get update \ 
+    && curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh \ 
+    && bash nodesource_setup.sh \
+    && apt install nodejs -y
 RUN usermod -aG docker jenkins
 RUN apt-get clean
 RUN curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
