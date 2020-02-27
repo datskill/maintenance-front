@@ -1,12 +1,6 @@
 .root {
   flex-grow: 1;
 }
-.menuButton {
-  margin-right: 20px;
-}
-.title {
-  flex-grow: 1;
-}
 .title-centred {
   margin: auto !important;
 }
