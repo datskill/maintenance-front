@@ -45,7 +45,16 @@ node {
         milestone()
         sh 'npm run build'
     }
-    
+    // stage('Archive') {
+    //     sh 'tar -cvzf dist.tar.gz --strip-components=1 dist'
+    //     archive 'dist.tar.gz'
+    // }
+
+    // stage('Deploy') {
+    //     milestone()
+    //     echo "Deploying..."
+    // }
+}
     stage('Sonarqube') {
     environment {
         scannerHome = tool 'SonarQubeScanner'
@@ -58,15 +67,4 @@ node {
             waitForQualityGate abortPipeline: true
         }
     }
-}
-
-    // stage('Archive') {
-    //     sh 'tar -cvzf dist.tar.gz --strip-components=1 dist'
-    //     archive 'dist.tar.gz'
-    // }
-
-    // stage('Deploy') {
-    //     milestone()
-    //     echo "Deploying..."
-    // }
 }
