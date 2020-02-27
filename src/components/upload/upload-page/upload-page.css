@@ -1,0 +1,12 @@
+.awesome-padding {
+  padding-top: 60px;
+  padding-left: 60px;
+}
+.display-nothing {
+  display: none;
+}
+.styled-p {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 16px;
+}

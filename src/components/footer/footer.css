@@ -1,19 +1,19 @@
 .fixed-bottom {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 .empty-div {
-    background-color: #3f51b5;
-    height: 50px;
+  background-color: #3f51b5;
+  height: 50px;
 }
 .styled-copyright {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    padding-left: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 10px;
 }
 .body-image {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }

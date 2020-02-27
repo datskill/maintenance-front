@@ -1,16 +1,16 @@
-    .root {
-            flex-grow: 1,
-        }
-        .menuButton {
-            margin-right: 20px;
-        }
-        .title {
-            flex-grow: 1,
-        }
-        .title-centred {
-            margin: auto !important;
-        }
-        .image-gabarit {
-            width: 35px;
-            height: 35px;
-        }
+.root {
+  flex-grow: 1;
+}
+.menuButton {
+  margin-right: 20px;
+}
+.title {
+  flex-grow: 1;
+}
+.title-centred {
+  margin: auto !important;
+}
+.image-gabarit {
+  width: 35px;
+  height: 35px;
+}
