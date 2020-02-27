@@ -43,9 +43,6 @@
 //     // }
 pipeline {
         agent any
-    //     triggers {
-    //     pollSCM('* * * * *')
-    // }
          tools {nodejs "maintenance-front"}
 
     stages {
