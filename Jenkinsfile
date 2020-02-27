@@ -43,11 +43,10 @@
 //     // }
 pipeline {
          agent any
+             triggers {
+        pollSCM('* * * * *')
+    }
          tools {nodejs "maintenance-front"}
-         options{
-        pipelineTriggers(
-              pollSCM('* * * * *'),
-        )
 }
 
     stages {
