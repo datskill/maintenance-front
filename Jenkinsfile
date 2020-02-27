@@ -42,7 +42,7 @@
 //     //     sh 'npm run build'
 //     // }
 pipeline {
-         agent any
+        agent any
         triggers {
         pollSCM('* * * * *')
     }
@@ -66,18 +66,18 @@ pipeline {
                            }
                         }
 
-        //  stage("Install Dependencies") {
-        //                           steps {
-        //                                 sh "npm install"
+         stage("Install Dependencies") {
+                                  steps {
+                                        sh "npm install"
 
-        //                                }
-        //                         }
+                                       }
+                                }
 
-        //  stage("unit Test") {
-        //                     steps {
-        //                         sh "npm test"
+         stage("Building") {
+                            steps {
+                                sh "npm run build"
 
-        //                       }
-        //                 }
+                              }
+                        }
              }
      }
