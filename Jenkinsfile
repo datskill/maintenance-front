@@ -49,7 +49,7 @@ node {
      environment {
         scannerHome = tool 'sonar-scanner'
     }
-        withSonarQubeEnv('sonarqube') {
+        withSonarQubeEnv('sonar-scanner') {
             sh "${scannerHome}/bin/sonar-scanner"
         }
         timeout(time: 10, unit: 'MINUTES') {
