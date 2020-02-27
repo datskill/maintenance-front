@@ -56,7 +56,7 @@ export default class UploadPage extends React.PureComponent<
         </Grid>
         <Grid item md={12}>
           <input
-            accept=".csv"
+            accept=".csv, .xml"
             id="contained-button-file"
             multiple
             type="file"

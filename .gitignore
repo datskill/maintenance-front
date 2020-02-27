@@ -12,6 +12,7 @@
 
 # production
 /build
+/preset
 
 # misc
 .DS_Store
