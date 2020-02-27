@@ -44,7 +44,7 @@
 pipeline {
         agent any
          tools {nodejs "maintenance-front"}
-
+        triggers { pollSCM('* * * * *') }
     stages {
         stage("Code Checkout") {
             steps {
