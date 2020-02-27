@@ -17,7 +17,12 @@ export const Text = {
     }
   },
   footer: {
-    copyright: "OpenData Paris Copyright 2021",
-    description: "EPSI MSPR Maintenance Applicative"
+    copyright: "OpenData Paris Copyright 2021©",
+    description: "EPSI MSPR Maintenance Applicative",
+    madewithlove: "Made with ❤ in EPSI Montpellier",
+  },
+  alert: {
+    title: "Status de l'upload",
+    ok: "Ok"
   }
 };

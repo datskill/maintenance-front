@@ -4,7 +4,7 @@ import UploadPage from "./upload-page/Upload-page";
 import { IStateInputCsv } from "../../core/types/IState";
 import "./generalPage.css";
 
-export default class GeneralPage extends React.Component<{}, IStateInputCsv> {
+export default class GeneralPage extends React.PureComponent<{}, IStateInputCsv> {
   constructor(props: any) {
     super(props);
     this.state = { files: [], onMaintenance: false };

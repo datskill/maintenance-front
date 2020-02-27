@@ -1,16 +1,17 @@
 import React from "react";
 import axios from "axios";
 import SaveIcon from "@material-ui/icons/Save";
+import Swal from "sweetalert2";
 import { Grid, Button } from "@material-ui/core";
 import { Text } from "../../../Text";
 import { fileListToArray, filesToFormData } from "../../../core/core/utils";
 import DisabledButton from "./send-button/DisabledButton";
 import { IStateUploadPage } from "../../../core/types/IState";
 import { IPropsUploadPage } from "../../../core/types/IProps";
-import "./upload-page.css";
 import ActivatedButton from "./send-button/ActivatedButton";
+import "./upload-page.css";
 
-export default class UploadPage extends React.Component<
+export default class UploadPage extends React.PureComponent<
   IPropsUploadPage,
   IStateUploadPage
 > {
@@ -34,7 +35,16 @@ export default class UploadPage extends React.Component<
         }
       })
       .then(res => {
-        console.log(res);
+        const statusResponse = res.status === 200 ? "success" : "warning";
+        Swal.fire({
+          title: Text.alert.title,
+          text: res.data,
+          icon: statusResponse,
+          showCancelButton: false,
+          confirmButtonText: Text.alert.ok
+        }).then(result => {
+          this.setState({ files: [] });
+        });
       });
   }
 
@@ -42,7 +52,7 @@ export default class UploadPage extends React.Component<
     return (
       <Grid container direction="column" justify="center" alignItems="center">
         <Grid item md={12}>
-          <p className="styled-p">{Text.uploadpage.uploadpage.title}</p>
+          <p className="styled-p-margin">{Text.uploadpage.uploadpage.title}</p>
         </Grid>
         <Grid item md={12}>
           <input

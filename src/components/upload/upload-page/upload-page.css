@@ -9,4 +9,16 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.styled-p-margin {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 16px;
+  margin-top: 70px;
+  margin-bottom: 10px;
+  list-style-type: none;
 }

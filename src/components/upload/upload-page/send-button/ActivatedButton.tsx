@@ -5,7 +5,7 @@ import { IPropsActivatedButton } from "../../../../core/types/IProps";
 import { Text } from "../../../../Text";
 import "./activatedButton.css";
 
-export default class ActivatedButton extends React.Component<
+export default class ActivatedButton extends React.PureComponent<
   IPropsActivatedButton,
   {}
 > {
