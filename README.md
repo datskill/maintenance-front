@@ -2,7 +2,7 @@
 
 ## Intégration continue
 
-Notre intégration continiue se compose des outils suivants : 
+Notre intégration continue se compose des outils suivants : 
 
 - Docker
 - Jenkins
