@@ -9,6 +9,13 @@ Notre intégration continue se compose des outils suivants :
 - SonarQube
 
 
+[Instalation et configuration d'un environnement de développement](docs/ECLIPSE.md)
+
+[Instalation et configuration de Jenkins](docs/ECLIPSE.md)
+
+
+[Instalation et configuration de SonarQube](docs/ECLIPSE.md)
+
 ## Installation et configuration d'un environnement de développement
 
 
