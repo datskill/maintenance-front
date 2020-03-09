@@ -1,6 +1,20 @@
 ## Installation et configuration d'un environnement de développement
 
+### Outils de développement React - TS
 
+Afin de pouvoir compiler le projet, vous devez vous munir des outils suivants : 
+
+- NodeJS
+- Angular CLI
+- Git
+
+Aprés avoir installé ces outils, cloner le projet. 
+
+Aprés avoir cloné le projet, reproduisez ces actions : 
+
+- Se placer dans le dossier du projet (`cd maintenance-front`)
+- Installer les dépendances du projets `npm install`
+- Compiler le projet `ng serve -o`
 ### Docker
 
 Pour installer Docker sur Windows, il faut obligatoirement Windows 10 professionnel, sinon il faudra télécharger Docker ToolBox.
