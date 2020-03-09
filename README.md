@@ -6,7 +6,7 @@
 - [Les procédures GIT](#procedure-git)
 - [Configuration de l'environnement d'intégration continue](#integration-continue)
 - [Configurer Jenkins](#jenkins)
-- [Configurer SonarQube](#sonar-qubes)
+- [Configurer SonarQube](#sonarqube)
 ## Pour bien démarrer sur le projet
 
 ### Outils de développement React - TS
