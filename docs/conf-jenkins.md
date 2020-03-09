@@ -77,3 +77,9 @@ Dans "**Name**", rentrez "**sonar-scanne**r"
 Dans "**Server URL"**, rentrez "http://sonarqube:9000/"
 
 Cliquez sur "**Save**" puis "**Apply**"
+
+Jenkins est maintenant configuré. 
+
+Vous pouvez passer à l'installation de **SonarQube**
+
+[Instalation et configuration de SonarQube](./conf-sonar.md)

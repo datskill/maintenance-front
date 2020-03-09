@@ -94,4 +94,8 @@ Tester l'installation: `docker-compose --version`
  Cela devrait afficher : ???
  
 
-Vous avez maintenant finis de configurer Docker, et pouvez désormais installer Jenkins et SonarQubes
+Vous avez maintenant finis de configurer Docker.
+
+Vous pouvez passez à l'étape de l'installation et de la confguration de Jenkins
+
+[**Instalation et configuration de Jenkins**](./conf-jenkins.md)

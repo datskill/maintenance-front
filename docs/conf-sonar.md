@@ -68,5 +68,5 @@ Cliquez sur "**Save**" puis "**Apply**"
 
 Maintenant, SonarQube pourra envoyer le résultat de l'analyse de code à Jenkins. 
 
-Jenkins et SonarQube sont maintenant configurés. Si vous voulez en savoir plus concernant le Dockerfile, Docker-Compose, JenkinsFile, Sonar-Properties, vous pouvez vous rendre dans l'annexe pour une description des fichiers.
+Jenkins et SonarQube sont maintenant configurés. Si vous voulez en savoir plus concernant le **Dockerfile**, **Docker-Compose,** **JenkinsFile**, **Sonar-Properties**, vous pouvez vous rendre dans l'annexe pour une description des fichiers.
 
