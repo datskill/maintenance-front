@@ -4,67 +4,69 @@ Normalement, le container SonarQube est déjà lancé à l'adresse suivante : ht
 
 Rendez-vous à l'adresse : http://localhost:9000/
 
-Connectez vous avec les identifiants par défauts
+- Connectez vous avec les identifiants par défauts
 
-**Nom d'utilisateur** : `admin`
+- **Nom d'utilisateur** : `admin`
 
-**Mots de passe** : `admin`
+- **Mots de passe** : `admin`
 
-Nous allons installer les plugins **SonarJS** & **SonarTS** pour que Sonar puisse analyser notre code React - Typescript
+- Nous allons installer les plugins **SonarJS** & **SonarTS** pour que Sonar puisse analyser notre code React - Typescript
 
-Dans la barre de navigation, cliquez sur "**Administration**"
+- Dans la barre de navigation, cliquez sur "**Administration**"
 
-Dans la barre, au dessous de la barre de navigationn cliquez sur "'**Marketplace**"
+- Dans la barre, au dessous de la barre de navigation cliquez sur "'**Marketplace**"
 
-Dans le barre de recherche du Marketplace, recherchez "**SonarJS**" (SonarTS est inclus dans SonarJS)
+- Dans le barre de recherche du Marketplace, recherchez "**SonarJS**" (SonarTS est inclus dans SonarJS)
 
-Cliquez sur "**Installer**", attendez que l'installation finisse puis rendez-vous sur la page d'accueil de SonarQube
+- Cliquez sur "**Installer**", attendez que l'installation finisse puis rendez-vous sur la page d'accueil de SonarQube
 
-Cliquez sur "**Create New Project**"
+- Cliquez sur "**Create New Project**"
 
-Dans "**project Key**", rentrez "**maintenance-front**"
+- Dans "**project Key**", rentrez "**maintenance-front**"
 
-Cliquez sur le bouton "**Set up**"
+- Cliquez sur le bouton "**Set up**"
 
 
-Dans "**Generate a token**", entrez "**maintenance-front"**
+- Dans "**Generate a token**", entrez "**maintenance-front"**
 
-Pour la question "**What's your project's main language**", répondez "**Other**"
+- Pour la question "**What's your project's main language**", répondez "**Other**"
 
-Sélectionner l'**OS** correspondant au votre
+- Sélectionner l'**OS** correspondant au votre
 
-Copier/Coller la commande SonarQube et éxécuter la à la racine du projet. (Il vous faudra avoir **Sonar-Scanner** d'installer sur votre ordinateur)
+- Copier/Coller la commande SonarQube et éxécuter la à la racine du projet. (Il vous faudra avoir **Sonar-Scanner** d'installer sur votre ordinateur)
 
 Aprés avoir éxécuter avec succés la commande de SonarQube, le projet devrait apparaitre sur la page d'accueil de SonarQube. 
 
 
 SonarQube est maintenant configuré. Nous allons créer un Token sur Sonar pour que Jenkins et Sonar puissent communiquer entre eux. 
 
-Dans la barre de navigation, sur la gauche, cliquez sur votre profil, puis cliquez sur "**My Account**"
+- Dans la barre de navigation, sur la gauche, cliquez sur votre profil, puis cliquez sur "**My Account**"
 
-Cliquez sur "'**Security**"
+- Cliquez sur "'**Security**"
 
-Générez un nouveau token qui a pour label "**sonar-scanner**". **Copiez** la clé secréte fournit par Sonar
+- Générez un nouveau token qui a pour label "**sonar-scanner**".
+
+- **Copiez** la clé secréte fournit par Sonar
 
 Retournez dans Jenkins
 
-Retournez à la configuration d'un SonarQube Server (**Manage Jenkins --> Manage System**)
+- Retournez à la configuration d'un SonarQube Server (**Manage Jenkins --> Manage System**)
 
-Dans "**Server authentication token**", cliquez sur le bouton "**Add**"
+- Dans "**Server authentication token**", cliquez sur le bouton "**Add**"
 
-Dans "'**Kind**", mettez "**Secret Text**"
+- Dans "'**Kind**", mettez "**Secret Text**"
 
-Dans "**Secret**", coller la clé précédemment copié sur Sonar
+- Dans "**Secret**", coller la clé précédemment copié sur Sonar
 
-Dans "**Id**", rentrez "**maintenance-front**"
+- Dans "**Id**", rentrez "**maintenance-front**"
 
-Laissez "Description" vide
+- Laissez "Description" vide
 
-Cliquez sur "[Add](http://sonarqube:9000/)'
+- Cliquez sur "**Add**"
 
-Dans la liste déroulante, sélectionnez le token vous avez créez
+- Dans la liste déroulante, sélectionnez le token vous avez créez
 
-Cliquez sur "**Save**" puis "**Apply**"
+- Cliquez sur "**Save**" puis "**Apply**"
 
 Maintenant, SonarQube pourra envoyer le résultat de l'analyse de code à Jenkins. 
 
