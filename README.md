@@ -18,10 +18,10 @@ Pour un nouveau développeur, il est conseillé de suivre la procédure suivante
 
 - Installer NodeJS (https://nodejs.org)
 - S'assurer de l'installation de NodeJS en tapant `node -version` dans un terminal
-- Installer Angular (https://angular.io)
-- S'assurer de l'installation de NodeJS en tapant `ng version` dans un terminal
+- Installer React (https://fr.reactjs.org/)
+- S'assurer de l'installation de React en tapant `npx --version` dans un terminal
 - Installer Git (https://git-scm.com)
-- S'assurer de l'installation de NodeJS en tapant `git -version` dans un terminal
+- S'assurer de l'installation de Git en tapant `git -version` dans un terminal
 - Si vous n'avez pas d'IDE à disposition, nous vous recommandons Visual Studio Code (https://code.visualstudio.com)
 
 Vous avez désormais tous les outils nécessaires
@@ -31,7 +31,7 @@ Vous avez désormais tous les outils nécessaires
 - Cloner le projet avec git `git clone https://github.com/datskill/maintenance-front.git`
 - Positionnez vous dans le répertoire du projet `cd maintenance-front`
 - Dans le terminal, tapez `npm install` pour installer les dépendances du projet
-- Dans le terminal, tapez `ng serve -o`
+- Dans le terminal, tapez `npm run start`
 
 Le projet va démarrer et s'ouvrir dans une fenêtre de votre navigateur par défaut
 
