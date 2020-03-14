@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaintenancePage renders correctly 1`] = `
+<div
+  className="MuiGrid-root maintenance-site MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-12"
+  >
+    <p
+      className="style-text"
+    >
+      Le site est actuellement en maintenance
+    </p>
+  </div>
+</div>
+`;
