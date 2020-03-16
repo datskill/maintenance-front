@@ -3,7 +3,7 @@
 ## Sommaire
 
 - [Comment bien démarrer sur le projet](#pour-bien-demarrer-sur-le-projets)
-- [Les procédures GIT](#procedure-GIT)
+- [Les procédures GIT](#procédure-GIT)
 - [Configuration de l'environnement d'intégration continue](#intégration-continue)
 - [Configurer Jenkins](#jenkins)
 - [Configurer SonarQube](#sonarqube)
