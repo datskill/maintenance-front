@@ -4,10 +4,21 @@ import UploadPage from "./upload-page/Upload-page";
 import { IStateInputCsv } from "../../core/types/IState";
 import "./generalPage.css";
 
-export default class GeneralPage extends React.PureComponent<{}, IStateInputCsv> {
+export default class GeneralPage extends React.PureComponent<
+  {},
+  IStateInputCsv
+> {
   constructor(props: any) {
     super(props);
     this.state = { files: [], onMaintenance: false };
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:8080/maintenance/get-status")
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ onMaintenance: data.status });
+      });
   }
   render() {
     return (
