@@ -25,7 +25,24 @@ export default class UploadPage extends React.PureComponent<
     const filesArray = fileListToArray(files);
     if (files) this.setState({ files: filesArray });
   };
-  sendCSV() {
+  async sendCSV() {
+    let response;
+    await fetch("http://localhost:8080/maintenance/get-status")
+      .then(response => response.json())
+      .then(data => {
+        response = data.status;
+      });
+    if (response) {
+      Swal.fire({
+        title: Text.alert.title,
+        text: "Site is on maintenance please wait a moment",
+        icon: "warning",
+        showCancelButton: false,
+        confirmButtonText: Text.alert.ok
+      });
+      window.location.reload();
+      return new Error("Site is on maintenance please wait a moment");
+    }
     const formData = new FormData();
     formData.append("files", this.state.files[0]);
     axios
