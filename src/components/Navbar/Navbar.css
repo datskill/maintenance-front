@@ -8,3 +8,13 @@
   width: 35px;
   height: 35px;
 }
+
+.button-api {
+  color: white !important;
+  border: none !important;
+  font-weight: 500;
+}
+
+.link-wrapper {
+    text-decoration: none !important;
+}
