@@ -2,7 +2,7 @@
 
 ## Sommaire
 
-- [Comment bien démarrer sur le projet](#pour-bien-demarrer-sur-le-projets)
+- [Comment bien démarrer sur le projet](#pour-bien-demarrer-sur-le-projet)
 - [Les procédures GIT](#procédure-GIT)
 - [Recommendations sur les Merges](#Merge-Request)
 - [Configuration de l'environnement d'intégration continue](#intégration-continue)
