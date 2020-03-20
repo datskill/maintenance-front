@@ -5,8 +5,8 @@
 /.pnp
 .pnp.js
 /.scannerwork
-/sonarqube
-/jenkins
+/CI/sonarqube
+/CI/jenkins
 # testing
 /coverage
 
