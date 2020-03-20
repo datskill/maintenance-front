@@ -14,6 +14,7 @@ git
 github-api
 github-branch-source
 github
+nodejs
 javadoc
 sonar
 jquery-detached
