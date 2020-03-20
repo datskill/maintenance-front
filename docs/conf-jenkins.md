@@ -31,25 +31,17 @@ Maintenant, il faut créer un build Jenkins qui analyse le code.
 
 - Dans le menu principal de Jenkins, cliquez sur "**New Item**" dans le bandeau de gauche
 
-Entrez le nom du build
+Entrez le nom du build : "**maintenance-front**"
 
-- Cliquez sur "**Pipeline**"
+- Cliquez sur "**Multibranch Pipeline**"
 
 - Cliquez sur "**Ok**"
 
-- Dans la configuration du build, allez dans la section "**Pipeline**"
+- Dans la configuration du build, allez dans la section "**Branches Sources**"
 
-- Choissiez "**Pipeline script from SCM**"
+- Rentrez l'url du dépot git "**https://github.com/datskill/maintenance-front**" dans "**Repository HTTPS URL**"
 
-- Dans SCM, choissisez  "**Git**"
-
-- Dans Repositories : entrez le lien de votre repository 
-
-Laissez les credential vident s si votre repository est public, sinon ajouter vos crédentials Github/Gitlab
-
-- Dans Branches to Build, laissez "**Master**"
-
-- Dans Script Path, éctivez "**Jenkinsfile**"
+- Dans la section "**Scan Repository Triggers**"  cochez la case "**Periodically if not otherwise run**"
 
 - Cliquez sur Save puis Apply
 
@@ -61,6 +53,24 @@ Le build Jenkins éxécutera les étapes suivantes :
 - Analyse du code sur SonarQube (le build s'arrêtera si une erreur apparait sur Sonar)
 - Build de l'application
 - Exécution des tests
+
+Le jenkins analysera toutes les branches "actives" du projet mais aussi les Pull Request de Github
+
+**/!\ Nous utilions l'API Github, de ce fait il peut y avoir une file d'attente pour build.**
+
+Il y a toutefois quelques manipulation à faire pour configurer NodeJS
+
+- Rendez vous dans "Manage Jenkins"
+
+- Rendez vous dans "Global Tools Configuration"
+
+- Cherchez la section "NodeJS"
+
+- Cliquez sur le bouton "Add NodeJS"
+
+- Dans "Name", rentrez "maintenance-front"
+
+- Cliquez sur "Apply" puis "Save" pour sauvegarder les changements
 
 
 Nous allons maintenant préparer la configuration de SonarQube sur Jenkins
