@@ -26,6 +26,35 @@ exports[`App renders correctly 1`] = `
           >
             OpenData Paris
           </h6>
+          <a
+            className="link-wrapper"
+            href="/api"
+            onClick={[Function]}
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-text button-api"
+              disabled={false}
+              onBlur={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              <span
+                className="MuiButton-label"
+              >
+                API
+              </span>
+            </button>
+          </a>
         </div>
       </header>
     </div>
