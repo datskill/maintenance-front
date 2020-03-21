@@ -9,6 +9,12 @@ pipeline {
                 url: 'https://github.com/datskill/maintenance-front.git'
                   }
               }
+                  }
+        stage("Tests") {
+            steps {
+                    sh "npm run test"
+            }
+        }
          stage('Code Quality') {
                    steps {
                        script {
@@ -36,10 +42,4 @@ pipeline {
 
                               }
                         }
-            stage("Tests auto") {
-                    steps {
-                            sh "npm run test"
-                    }
-                                 }
-             }
      }
