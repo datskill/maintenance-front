@@ -36,9 +36,9 @@ pipeline {
 
                               }
                         }
-            stage("Tests auuto") {
+            stage("Tests auto") {
                     steps {
-                            sh "yarn test"
+                            sh "npm run test"
                     }
                                  }
              }
