@@ -9,7 +9,6 @@ pipeline {
                 url: 'https://github.com/datskill/maintenance-front.git'
                   }
               }
-                  }
         stage("Tests") {
             steps {
                     sh "npm run test"
