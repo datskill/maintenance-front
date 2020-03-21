@@ -1,2 +1,3 @@
+## Ignorer les dossiers dans le container Docker --> Gain de place et de temps
 node_modules
 npm-debug.log
