@@ -1,6 +1,7 @@
 ace-editor
 ant
 antisamy-markup-formatter
+nodejs
 branch-api
 cloudbees-folder
 credentials
